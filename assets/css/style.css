@@ -1,0 +1,33 @@
+/* Lectures page */
+.section-lectures,
+.section-notes {
+  width: 100%;
+  padding: 10px;
+  display: grid;
+}
+
+#lecturesContainer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 0.6fr, 1.8fr, 0.6fr;
+  width: 100%;
+}
+
+.sidebar {
+  background-color: #0c122833;
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+}
+
+.lecture-item:hover {
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+
+/* Lectures page */
