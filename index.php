@@ -32,7 +32,6 @@
     </nav>
   </header>
   <!--end header-->
-
   <!-- main Banner -->
   <section class="section main-banner" id="top" data-section="section1">
     <video autoplay muted loop id="bg-video">
@@ -45,7 +44,6 @@
     </div>
   </section>
   <!-- end main Banner -->
-
   <!-- features-->
   <section class="features">
     <div class="container">
@@ -84,7 +82,6 @@
     </div>
   </section>
   <!-- end features-->
-
   <!-- courses -->
   <section class="section courses" data-section="section4">
     <div class="container-fluid">
@@ -166,7 +163,6 @@
     </div>
   </section>
   <!-- end courses -->
-
   <!-- Contact -->
   <section class="section contact" data-section="section6">
     <div class="container">
@@ -210,7 +206,6 @@
     </div>
   </section>
   <!-- end contact -->
-
   <!-- footer -->
   <footer>
     <div class="container">
@@ -223,7 +218,6 @@
     </div>
   </footer>
   <!-- end footer -->
-
   <!-- Modal window -->
   <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -262,7 +256,6 @@
     </div>
   </div>
   <!-- end modal window -->
-
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -276,7 +269,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <!-- end bootstrap core JavaScript -->
-
   <!-- Scripts -->
   <script>
     document.getElementById('viewLectures').addEventListener('click', () => {
