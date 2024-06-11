@@ -26,7 +26,7 @@
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
         <li><a id="viewLectures">Лекции</a></li>
-        <li><a>Практика</a></li>
+        <li><a id="viewPractice">Практика</a></li>
         <li><a id="open-modal-btn"><img width="30" height="25" src="assets\images\user.png" alt="user--v1" /> профиль</a></li>
       </ul>
     </nav>
@@ -273,6 +273,11 @@
   <script>
     document.getElementById('viewLectures').addEventListener('click', () => {
       window.location.href = 'lectures.php';
+    });
+  </script>
+  <script>
+    document.getElementById('viewPractice').addEventListener('click', () => {
+      window.location.href = 'practice.php';
     });
   </script>
   <script>
