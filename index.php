@@ -22,12 +22,13 @@
     <div class="logo">
       <a href="">Вгуит_лекции</a>
     </div>
-    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <a href="#menu" class="menu-link" style="width: 60px; height: 60px;"><i class="fa fa-bars"><img class="menu-ico" src="assets/images/Menu_ico.svg"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
         <li><a id="viewLectures">Лекции</a></li>
         <li><a id="viewPractice">Практика</a></li>
-        <li><a id="open-modal-btn"><img width="30" height="25" src="assets\images\user.png" alt="user--v1" /> профиль</a></li>
+        <li><a id="open-modal-btn"><img width="30" height="25" src="assets\images\user.png" alt="user--v1" />
+            профиль</a></li>
       </ul>
     </nav>
   </header>
@@ -57,10 +58,8 @@
                 <h4><i class="fa fa-book"></i>Лекции</h4>
               </div>
               <div class="content-hide">
-                <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.
-                  Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
-                <p class="hidden-sm d-lg-flex justify-content-center">Curabitur id eros vehicula, tincidunt libero eu,
-                  lobortis mi. In mollis eros a posuere imperdiet.</p>
+                <p class="hidden-sm d-lg-flex justify-content-center">Изучение нужных тем с возможностью оставлять
+                  заметки.</p>
               </div>
             </div>
           </div>
@@ -72,10 +71,8 @@
                 <h4><i class="fa fa-graduation-cap"></i>Практика</h4>
               </div>
               <div class="content-hide">
-                <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.
-                  Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
-                <p class="hidden-sm d-lg-flex justify-content-center">Curabitur id eros vehicula, tincidunt libero eu,
-                  lobortis mi. In mollis eros a posuere imperdiet.</p>
+                <p class="hidden-sm d-lg-flex justify-content-center">Лабораторные работы по темам с возможностью
+                  прикрепить отчет по данной теме чтобы он никуда не потерялся.</p>
               </div>
             </div>
           </div>
@@ -91,7 +88,6 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-heading">
-            <h2>Изучаемые темы</h2>
           </div>
         </div>
         <div class="owl-carousel owl-theme">
@@ -111,18 +107,6 @@
             <img src="assets/images/courses-03.jpg" alt="Course #3">
             <div class="down-content">
               <h4>Media Technology</h4>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/courses-04.jpg" alt="Course #4">
-            <div class="down-content">
-              <h4>Communications</h4>
-            </div>
-          </div>
-          <div class="item">
-            <img src="assets/images/courses-05.jpg" alt="">
-            <div class="down-content">
-              <h4>Business Ethics</h4>
             </div>
           </div>
           <div class="item">
@@ -217,7 +201,7 @@
       <div class="row">
         <div class="col-md-12">
           <p>Сайт подготовлен в качестве дипломной работы ФГБОУ ВО "ВГУИТ"</p>
-          <p> &copy;В. Иванов</p>
+          <p> &copy; Иванов В. В.</p>
         </div>
       </div>
     </div>
@@ -276,7 +260,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <!-- end bootstrap core JavaScript -->
-   
+
   <!-- Scripts -->
   <script>
     document.getElementById('viewLectures').addEventListener('click', () => {

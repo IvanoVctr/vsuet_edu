@@ -50,7 +50,7 @@ $Parsedown = new Parsedown();
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
-        <li><a>Заметки</a></li>
+        <li><a id="viewLectures">Лекции</a></li>
       </ul>
     </nav>
   </header>
@@ -86,9 +86,7 @@ $Parsedown = new Parsedown();
     </div>
   </section>
   <!-- Lectures end-->
-
   <hr style="border: 1px solid #9c9c9c; width: 75%; margin-top: 40px;">
-
   <!-- Notes -->
   <section class="section-notes">
     <div class="notes">
@@ -116,6 +114,11 @@ $Parsedown = new Parsedown();
   <!-- end footer -->
 
   <!-- Script -->
+  <script>
+    document.getElementById('viewLectures').addEventListener('click', () => {
+      window.location.href = 'lectures.php';
+    });
+  </script>
   <script>
     function loadLecture(select) {
       const selectedFile = select.value;

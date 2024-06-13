@@ -1,6 +1,7 @@
-html{
+html {
   min-height: 100vh;
 }
+
 ::-webkit-scrollbar {
   width: 4px;
   /* Ширина scrollbar */
@@ -96,14 +97,17 @@ a.menu-link {
   display: none;
 }
 
+.menu-ico{
+  filter: invert(1) ;
+}
+
 @media screen and (max-width: 950px) {
   a.menu-link {
     float: right;
     display: block;
     font-size: 36px;
     color: #fff;
-    padding-right: 30px;
-    padding-top: 15px;
+    padding-top: 6px;
   }
 
   nav[role="navigation"] {
@@ -122,7 +126,6 @@ a.menu-link {
 
   nav[role="navigation"].active {
     max-height: 20em;
-    height: 20em;
     overflow-y: scroll;
   }
 
@@ -187,7 +190,6 @@ a.menu-link {
 
 .main-header {
   background-color: rgba(22, 34, 57, 0.95);
-  height: 80px;
   position: sticky;
   z-index: 12;
   width: 100%;
@@ -205,6 +207,14 @@ a.menu-link {
   text-transform: uppercase;
   font-weight: 800;
   color: #fff;
+}
+
+@media screen and (max-width: 410px) {
+  .main-header .logo a{
+    font-size: 24px;
+    margin: auto 0;
+  }
+  
 }
 
 .main-header .logo a em {
@@ -322,6 +332,12 @@ a.menu-link {
   width: 100%;
 }
 
+@media screen and (max-width: 950px) {
+.main-banner {
+  height: 730px;
+}
+}
+
 #bg-video {
   min-width: 100%;
   min-height: 95vh;
@@ -361,6 +377,13 @@ a.menu-link {
   font-weight: 800;
   color: #fff;
   letter-spacing: 1px;
+}
+
+@media screen and (max-width: 600px) {
+  .main-banner .caption h5{
+    font-size: 24px;
+  }
+  
 }
 
 .main-banner .caption h5 em {
@@ -648,194 +671,6 @@ section.why-us {
   }
 
 }
-
-
-/* Coming Soon */
-
-section.coming-soon {
-  background-image: url(../images/coming-soon-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #172238;
-  padding: 120px 0px;
-}
-
-section.coming-soon .continer .counter div {
-  display: inline-block;
-}
-
-section.coming-soon .continer h4 {
-  margin-top: 100px;
-  font-size: 30px;
-  color: #fff;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  line-height: 40px;
-  margin-bottom: 50px;
-}
-
-section.coming-soon .continer h4 em {
-  font-style: normal;
-  color: #f5a425;
-}
-
-@media screen and (max-width: 767px) {
-
-  section.coming-soon .continer h4 {
-    text-align: center;
-  }
-
-}
-
-section.coming-soon .continer .counter .days,
-section.coming-soon .continer .counter .hours,
-section.coming-soon .continer .counter .minutes,
-section.coming-soon .continer .counter .seconds {
-  width: 22%;
-  height: 140px;
-  float: left;
-  text-align: center;
-  font-size: 48px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #fff;
-  background-color: rgba(250, 250, 250, 0.1);
-}
-
-@media screen and (max-width: 992px) {
-
-  section.coming-soon .continer .counter .days,
-  section.coming-soon .continer .counter .hours,
-  section.coming-soon .continer .counter .minutes,
-  section.coming-soon .continer .counter .seconds {
-    font-size: 26px;
-  }
-
-  section.coming-soon .continer .counter .days .value,
-  section.coming-soon .continer .counter .hours .value,
-  section.coming-soon .continer .counter .minutes .value,
-  section.coming-soon .continer .counter .seconds .value {
-    margin-top: 40px !important;
-  }
-
-  section.coming-soon .continer .counter span {
-    font-size: 14px !important;
-  }
-
-}
-
-section.coming-soon .continer .counter .days,
-section.coming-soon .continer .counter .hours,
-section.coming-soon .continer .counter .minutes {
-  margin-right: 4%;
-}
-
-section.coming-soon .continer .counter .days .value,
-section.coming-soon .continer .counter .hours .value,
-section.coming-soon .continer .counter .minutes .value,
-section.coming-soon .continer .counter .seconds .value {
-  margin-top: 15px;
-  display: block;
-  width: 100%;
-}
-
-section.coming-soon .continer .counter span {
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #f5a425;
-  font-weight: 500;
-  letter-spacing: 1px;
-  margin-top: 0px;
-  display: block;
-}
-
-section.coming-soon .right-content {
-  margin-left: 30px;
-}
-
-@media screen and (max-width: 767px) {
-
-  section.coming-soon .right-content {
-    margin-top: 60px;
-    margin-left: 0px;
-  }
-
-}
-
-section.coming-soon .top-content {
-  margin-bottom: -8px;
-}
-
-section.coming-soon .top-content h6 {
-  font-size: 14px;
-  color: #fff;
-  background-color: rgba(250, 250, 250, 0.2);
-  padding: 40px;
-  text-align: center;
-  line-height: 24px;
-}
-
-section.coming-soon .top-content h6 em {
-  font-style: normal;
-  font-weight: 600;
-}
-
-section.coming-soon form {
-  background-color: rgba(250, 250, 250, 0.1);
-  padding: 60px 40px;
-  width: 100%;
-  text-align: center;
-}
-
-section.coming-soon form input {
-  width: 100%;
-  height: 40px;
-  background-color: rgba(250, 250, 250, 0.1);
-  border-radius: 0px;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 13px;
-  margin-bottom: 20px;
-  letter-spacing: 0.5px;
-}
-
-section.coming-soon form input:focus {
-  outline: none;
-  border: none;
-  box-shadow: none;
-  color: #fff;
-  background-color: rgba(250, 250, 250, 0.1);
-}
-
-section.coming-soon form::placeholder {
-  color: #fff
-}
-
-section.coming-soon form input::placeholder {
-  color: #fff;
-}
-
-section.coming-soon form input::placeholder {
-  color: #fff;
-}
-
-section.coming-soon form button {
-  margin-top: 10px;
-  background-color: #f5a425;
-  color: #fff;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-  padding: 12px 20px;
-  display: inline-block;
-  outline: none;
-  box-shadow: none;
-  border: none;
-}
-
-
 
 /* Courses */
 
@@ -1748,7 +1583,7 @@ footer p a:hover {
 /* Стили для модального окна конец*/
 
 /* Lectures page */
-.banner{
+.banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1759,6 +1594,7 @@ footer p a:hover {
   width: 100%;
   height: 100%;
 }
+
 .section-lectures,
 .section-notes {
   width: 100%;
@@ -1800,7 +1636,7 @@ footer p a:hover {
   position: sticky;
   top: 100px;
   background-color: hsla(219, 40%, 24%, 0.949);
-  min-height: 570px;
+  min-height: 580px;
   left: 10px;
   right: 10px;
 }
@@ -1820,21 +1656,26 @@ option {
   align-items: center;
   gap: 15px;
   width: 100%;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.section-notes {
+  background-image: url(../images/video-bg.jpg);
 }
 
 .notes h4 {
   text-align: center;
+  color: #fff;
 }
 
-.notes form{
+.notes form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 65vw;
 }
 
-.notes form textarea{
+.notes form textarea {
   height: 20vh;
   resize: none;
 }
@@ -1846,6 +1687,12 @@ option {
 /* Показывать список лекций по умолчанию */
 #lecturesList {
   display: block;
+}
+
+#lecturesList ul li:hover {
+  background-color: #01023f;
+  border-radius: 6px;
+  padding: 2px;
 }
 
 /* Скрывать список лекций и показывать select на мобильных устройствах */
@@ -1932,7 +1779,7 @@ option {
 
     @media screen and (max-width: 374px) {
       .main-header {
-        height: 100px;
+        height: 80px;
       }
 
       footer {
@@ -1946,3 +1793,77 @@ option {
 }
 
 /* Lectures page */
+.user-page {
+  margin: 20px 0;
+  min-height: 73vh;
+}
+
+.user-main {
+  display: grid;
+  grid-template-rows: 0.2fr 1.8fr;
+  width: 100%;
+}
+
+.user-img {
+  border: 1px solid #fff;
+  border-radius: 100%;
+  padding: 15px;
+}
+
+.head {
+  width: 100%;
+}
+
+.user-page-block {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr;
+  gap: 20px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.user-img {
+  filter: grayscale(1) invert(1);
+  margin: auto;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-item {
+  width: 100%;
+}
+
+.accordion-button {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 25px;
+  padding: 8px;
+  width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+  .user-page-block {
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 5%;
+  }
+  .data-block{
+    width: 100%;
+  }
+  .user-info{
+    width: 100%;
+  }
+
+}

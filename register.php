@@ -17,4 +17,3 @@ mysqli_stmt_bind_param($stmt, "sss", $username, $password_hash, $email);
 mysqli_stmt_execute($stmt);
 
 mysqli_close($conn);
-?>

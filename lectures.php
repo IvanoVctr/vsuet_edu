@@ -64,7 +64,7 @@ $Parsedown = new Parsedown();
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
-        <li><a>Заметки</a></li>
+        <li><a id="viewPractice">Практика</a></li>
       </ul>
     </nav>
   </header>
@@ -162,6 +162,11 @@ $Parsedown = new Parsedown();
       const select = document.getElementById('lecturesSelect');
       syncSelectWithLinks(select);
     }
+  </script>
+  <script>
+    document.getElementById('viewPractice').addEventListener('click', () => {
+      window.location.href = 'practice.php';
+    });
   </script>
   <!-- Script end-->
   
