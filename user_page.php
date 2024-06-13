@@ -53,9 +53,9 @@
               <img class="user-img" width="140" height="140" src="assets\images\user.png" alt="user--v1"/>
               <hr style="border: 1px solid #9c9c9c; width: 80%; margin-top: 10px;">
               <label>Логин:</label>
-              <p></p>
+              <h6>User</h6>
               <label>Email:</label>
-              <p></p>
+              <h6>User@gmail.com</h6>
               <input type="submit" value="Выход" class="btn-exit btn btn-danger">
             </div>
             <div class="data-block">
@@ -65,13 +65,18 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                       aria-controls="panelsStayOpen-collapseTwo">
-                      Заметки
+                      Заметки:
                     </button>
                   </h2>
                   <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-headingTwo">
                     <div class="accordion-body">
-                      Тут будут замееееточки
+                      <a>Ajax.txt</a>
+                      <hr>
+                      <a>CMS.txt</a>
+                      <hr>
+                      <a>Основы_php.txt</a>
+                      <hr>
                     </div>
                   </div>
                 </div>
@@ -80,13 +85,16 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
                       aria-controls="panelsStayOpen-collapseThree">
-                      Отчеты
+                      Отчеты:
                     </button>
                   </h2>
                   <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-headingThree">
                     <div class="accordion-body">
-                      Тут будут ваши отчееееетики
+                      <a>Отчет-Ajax.docx</a>
+                      <hr>
+                      <a>Отчет-Ajax.docx</a>
+                      <hr>
                     </div>
                   </div>
                 </div>

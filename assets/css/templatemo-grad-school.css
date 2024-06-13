@@ -1844,7 +1844,8 @@ option {
 }
 
 .accordion-button {
-  background-color: #fff;
+  background-color: rgba(22, 34, 57, 0.95);
+  color: #fff;
   border: 1px solid #000;
   border-radius: 10px;
   text-align: left;
@@ -1865,5 +1866,8 @@ option {
   .user-info{
     width: 100%;
   }
+  .user-page{
+  min-height: 100vh;
+}
 
 }

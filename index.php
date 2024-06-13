@@ -22,7 +22,8 @@
     <div class="logo">
       <a href="">Вгуит_лекции</a>
     </div>
-    <a href="#menu" class="menu-link" style="width: 60px; height: 60px;"><i class="fa fa-bars"><img class="menu-ico" src="assets/images/Menu_ico.svg"></i></a>
+    <a href="#menu" class="menu-link" style="width: 60px; height: 60px;"><i class="fa fa-bars"><img class="menu-ico"
+          src="assets/images/Menu_ico.svg"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
         <li><a id="viewLectures">Лекции</a></li>
@@ -92,57 +93,57 @@
         </div>
         <div class="owl-carousel owl-theme">
           <div class="item">
-            <img src="assets/images/courses-01.jpg" alt="Course #1">
+            <img src="assets/images/ico/php.png" alt="Course #1">
             <div class="down-content">
-              <h4>Digital Marketing</h4>
+              <h4>PHP</h4>
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/courses-02.jpg" alt="Course #2">
+            <img src="assets/images/ico/js.png" alt="Course #2">
             <div class="down-content">
-              <h4>Business World</h4>
+              <h4>JS</h4>
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/courses-03.jpg" alt="Course #3">
+            <img src="assets/images/ico/jQuery.png" alt="Course #3">
             <div class="down-content">
-              <h4>Media Technology</h4>
+              <h4>jQuery</h4>
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/courses-01.jpg" alt="">
+            <img src="assets/images/ico/parsedown.png" alt="">
             <div class="down-content">
-              <h4>Photography</h4>
+              <h4>Markdown + PHP</h4>
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/courses-02.jpg" alt="">
+            <img src="assets/images/ico/markdawn.png" alt="">
             <div class="down-content">
-              <h4>Web Development</h4>
+              <h4>Markdown</h4>
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/courses-03.jpg" alt="">
+            <img src="assets/images/ico/html.png" alt="">
             <div class="down-content">
-              <h4>Learn HTML CSS</h4>
+              <h4>HTML</h4>
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/courses-04.jpg" alt="">
+            <img src="assets/images/ico/CSS3.png" alt="">
             <div class="down-content">
-              <h4>Social Media</h4>
+              <h4>CSS</h4>
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/courses-05.jpg" alt="">
+            <img src="assets/images/ico/mysql.png" alt="">
             <div class="down-content">
-              <h4>Digital Arts</h4>
+              <h4>MySql</h4>
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/courses-01.jpg" alt="">
+            <img src="assets/images/AJAX.png" alt="">
             <div class="down-content">
-              <h4>Media Streaming</h4>
+              <h4>AJAX</h4>
             </div>
           </div>
         </div>
