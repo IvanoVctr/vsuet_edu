@@ -1826,6 +1826,7 @@ option {
   padding: 10px;
   border: 1px solid #000;
   border-radius: 10px;
+  height: fit-content;
 }
 
 .user-img {
@@ -1868,6 +1869,21 @@ option {
   }
   .user-page{
   min-height: 100vh;
+}}
+
+
+
+.accordion-button > img {
+  width: 30px;
+  height: 30px;
+  float: right;
+  transition: transform 0.3s; /* добавляем переход для свойства transform */
 }
 
+.accordion-button.collapsed > img {
+  transform: rotate(0deg);
+}
+
+.accordion-button:not(.collapsed) > img {
+  transform: rotate(-90deg);
 }

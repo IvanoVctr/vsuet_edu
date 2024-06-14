@@ -111,12 +111,6 @@
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/ico/parsedown.png" alt="">
-            <div class="down-content">
-              <h4>Markdown + PHP</h4>
-            </div>
-          </div>
-          <div class="item">
             <img src="assets/images/ico/markdawn.png" alt="">
             <div class="down-content">
               <h4>Markdown</h4>
@@ -141,7 +135,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/AJAX.png" alt="">
+            <img src="assets/images/ico/AJAX.png" alt="">
             <div class="down-content">
               <h4>AJAX</h4>
             </div>

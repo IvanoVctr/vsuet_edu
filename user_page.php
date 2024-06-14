@@ -65,8 +65,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                       aria-controls="panelsStayOpen-collapseTwo">
-                      Заметки:
-                    </button>
+                      Заметки: <img сlass="open-accordeon" src="assets/images/open.png"></button>
                   </h2>
                   <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-headingTwo">
@@ -85,8 +84,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
                       aria-controls="panelsStayOpen-collapseThree">
-                      Отчеты:
-                    </button>
+                      Отчеты: <img сlass="open-accordeon" src="assets/images/open.png"></button>
                   </h2>
                   <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-headingThree">
