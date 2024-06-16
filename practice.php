@@ -1,12 +1,10 @@
 <?php
 require_once 'Parsedown.php';
 // Функция для получения списка файлов в папке lectures
-function getLectureFiles($dir = __DIR__ . '\practice')
+function getLectureFiles($dir = __DIR__ . '/practice')
 {
   $files = array_diff(scandir($dir), array('.', '..'));
-  return array_values(array_filter($files, function ($file) use ($dir) {
-    return is_file("$dir/$file");
-  }));
+      return $files;
 }
 // Функция для чтения содержимого выбранной лекции
 function getLectureContent($filename)

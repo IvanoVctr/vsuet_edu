@@ -1,12 +1,10 @@
 <?php
 require_once 'Parsedown.php';
 // Функция для получения списка файлов в папке lectures
-function getLectureFiles($dir = __DIR__ . '\lectures')
+function getLectureFiles($dir = __DIR__ . '/lectures')
 {
   $files = array_diff(scandir($dir), array('.', '..'));
-  return array_values(array_filter($files, function ($file) use ($dir) {
-    return is_file("$dir/$file");
-  }));
+    return $files;
 }
 // Функция для чтения содержимого выбранной лекции
 function getLectureContent($filename)
@@ -38,6 +36,7 @@ $lectureContent = $selectedLecture ? getLectureContent(__DIR__ . "/lectures/" . 
 $headings = extractHeadings($lectureContent);
 $Parsedown = new Parsedown();
 ?>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -76,10 +75,12 @@ $Parsedown = new Parsedown();
       <div id="lecturesList" class="sidebar">
         <!-- Перечень лекций из папки /lectures -->
         <ul>
-          <?php foreach ($lectureFiles as $file): ?>
+            
+<?php foreach ($lectureFiles as $file): ?>
             <li><a href="?lecture=<?= urlencode($file) ?>"
                 data-lecture="<?= htmlspecialchars($file) ?>"><?= htmlspecialchars($file) ?></a></li>
           <?php endforeach; ?>
+          
         </ul>
       </div>
       <div id="lecturesSelect" class="sidebar">
@@ -95,6 +96,7 @@ $Parsedown = new Parsedown();
       </div>
       <div id="lectureContent" class="content">
         <!-- Отображение выбранной лекции из левого sidebar -->
+        
         <?php echo $Parsedown->text($lectureContent) ?>
       </div>
       <div id="headingsList" class="sidebar">
