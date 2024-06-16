@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: index.php");
+    exit();
+}
+
+$username = $_SESSION['username'];
+$email = $_SESSION['email'];
+?>
 <!DOCTYPE html>
 <html lang="ru" style="height: 100% !important;">
 
@@ -53,10 +64,10 @@
               <img class="user-img" width="140" height="140" src="assets\images\user.png" alt="user--v1"/>
               <hr style="border: 1px solid #9c9c9c; width: 80%; margin-top: 10px;">
               <label>Логин:</label>
-              <h6>User</h6>
+              <h6><?php echo $_SESSION['username'];?></h6>
               <label>Email:</label>
-              <h6>User@gmail.com</h6>
-              <input type="submit" value="Выход" class="btn-exit btn btn-danger">
+              <h6><?php echo $_SESSION['email'];?></h6>
+              <input type="submit" value="Выход" class="btn-exit btn btn-danger" onclick="logout()">
             </div>
             <div class="data-block">
               <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -102,9 +113,8 @@
         </div>
       </div>
   </section>
-
   <!-- end user page-->
-
+  
   <!-- footer -->
   <footer style="bottom: 0;">
     <div class="container">
@@ -130,6 +140,11 @@
     window.location.href = 'practice.php';
   });
 </script>
-<!-- Script end -->
 
+<!-- Script end -->
+<script>
+    function logout() {
+    window.location.href = 'logout.php';
+}
+</script>
 </html>

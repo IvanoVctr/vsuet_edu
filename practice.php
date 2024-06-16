@@ -92,9 +92,10 @@ $Parsedown = new Parsedown();
     <div class="notes">
       <h4>Прикрепить отчет:</h4>
       <form action="#" method="post">
-        <input type="hidden" name="prictice_id">
-        <input class="form-control" type="file" id="formFileMultiple" multiple>
-        <input type="submit" value="Прикрепить" class="btn btn btn-success">
+        <div class="input-group mb-3">
+          <input type="file" class="form-control" id="inputGroupFile02">
+          <label class="input-group-text" for="inputGroupFile02">Upload</label>
+        </div>
       </form>
     </div>
   </section>
@@ -143,6 +144,7 @@ $Parsedown = new Parsedown();
     }
   </script>
   <!-- Script end-->
-  
+
 </body>
+
 </html>
