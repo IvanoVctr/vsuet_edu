@@ -8,6 +8,7 @@ if (!isset($_SESSION['username'])) {
 
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
+
 ?>
 <!DOCTYPE html>
 <html lang="ru" style="height: 100% !important;">
@@ -67,6 +68,8 @@ $email = $_SESSION['email'];
               <h6><?php echo $_SESSION['username'];?></h6>
               <label>Email:</label>
               <h6><?php echo $_SESSION['email'];?></h6>
+              <label>Дата регистрации:</label>
+              <h6><?php echo $_SESSION['created_at'];?></h6>
               <input type="submit" value="Выход" class="btn-exit btn btn-danger" onclick="logout()">
             </div>
             <div class="data-block">

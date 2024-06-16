@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,8 @@
       <ul class="main-menu">
         <li><a id="viewLectures">Лекции</a></li>
         <li><a id="viewPractice">Практика</a></li>
-        <li><a id="open-modal-btn" ><img width="30" height="25" src="assets\images\user.png" alt="user--v1" /> профиль</a></li>
+        <li><a id="open-modal-btn"><img width="30" height="25" src="assets\images\user.png" alt="user--v1" />профиль</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -268,14 +269,19 @@
       window.location.href = 'practice.php';
     });
   </script>
-<script>
+  <script>
     $(document).ready(function () {
+      console.log('<?php echo isset($_SESSION['username']) ?>');
       $('#open-modal-btn').click(function (event) {
         event.preventDefault(); // Prevent the default link behavior
-        $('#modal').modal('show');
+        if ('<?php echo isset($_SESSION['username']) ?>' === ""){
+          $('#modal').modal('show');
+        } else {
+          window.location.href = 'user_page.php';
+        }
       });
     });
-</script>
+  </script>
   <!-- end scripts -->
 </body>
 

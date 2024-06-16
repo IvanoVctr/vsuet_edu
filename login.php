@@ -1,11 +1,5 @@
 <?php
-// Подключаемся к базе данных
-$conn = mysqli_connect("localhost", "root", "", "database");
-
-// Проверяем соединение
-if (!$conn) {
-    die("Connection failed: ". mysqli_connect_error());
-}
+require_once 'connection.php';
 
 // Получаем данные из формы авторизации
 $username = $_POST['username'];
@@ -26,6 +20,7 @@ if (mysqli_num_rows($result) > 0) {
         session_start();
         $_SESSION['username'] = $username;
         $_SESSION['email'] = $user['email'];
+        $_SESSION['created_at'] = $user['created_at'];
         header("Location: user_page.php");
         exit;
     } else {
