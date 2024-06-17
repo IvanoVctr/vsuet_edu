@@ -4,7 +4,7 @@ require_once 'Parsedown.php';
 function getLectureFiles($dir = __DIR__ . '/lectures')
 {
   $files = array_diff(scandir($dir), array('.', '..'));
-    return $files;
+  return $files;
 }
 // Функция для чтения содержимого выбранной лекции
 function getLectureContent($filename)
@@ -75,12 +75,11 @@ $Parsedown = new Parsedown();
       <div id="lecturesList" class="sidebar">
         <!-- Перечень лекций из папки /lectures -->
         <ul>
-            
-<?php foreach ($lectureFiles as $file): ?>
+
+          <?php foreach ($lectureFiles as $file): ?>
             <li><a href="?lecture=<?= urlencode($file) ?>"
-                data-lecture="<?= htmlspecialchars($file) ?>"><?= htmlspecialchars($file) ?></a></li>
+                data-lecture="<?= htmlspecialchars($file) ?>"><?= htmlspecialchars(mb_substr($file, 0, -3)) ?></a></li>
           <?php endforeach; ?>
-          
         </ul>
       </div>
       <div id="lecturesSelect" class="sidebar">
@@ -89,20 +88,20 @@ $Parsedown = new Parsedown();
           <option value="">Выберите лекцию</option>
           <?php foreach ($lectureFiles as $file): ?>
             <option value="<?= htmlspecialchars($file) ?>" <?= $selectedLecture === $file ? 'selected' : '' ?>>
-              <?= htmlspecialchars($file) ?>
+              <?= htmlspecialchars(mb_substr($file, 0, -3)) ?>
             </option>
           <?php endforeach; ?>
         </select>
       </div>
       <div id="lectureContent" class="content">
         <!-- Отображение выбранной лекции из левого sidebar -->
-        
+
         <?php echo $Parsedown->text($lectureContent) ?>
       </div>
       <div id="headingsList" class="sidebar">
         <!-- Заголовки отображенной лекции -->
-         <h5>Содержание:</h5>
-         <hr style="border-color: #fff;">
+        <h5>Содержание:</h5>
+        <hr style="border-color: #fff;">
         <ul>
           <?php foreach ($headings as $heading): ?>
             <li style="margin-left: <?= ($heading['level'] - 1) * 20 ?>px;"><?= htmlspecialchars($heading['text']) ?></li>
@@ -171,6 +170,7 @@ $Parsedown = new Parsedown();
     });
   </script>
   <!-- Script end-->
-  
+
 </body>
+
 </html>
