@@ -2,16 +2,25 @@
 session_start();
 
 if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
-    exit();
+  header("Location: index.php");
+  exit();
 }
 
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 
+// Add this code block where you want to display the notes
+
+$username = $_SESSION['username'];
+$filePath = __DIR__ . "/notes/$username.txt";
+
+$notes = "";
+if (file_exists($filePath)) {
+  $notes = file_get_contents($filePath);
+}
 ?>
 <!DOCTYPE html>
-<html lang="ru" style="height: 100% !important;">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -36,7 +45,7 @@ $email = $_SESSION['email'];
 </head>
 
 <body style="height: 100% !important;" class="d-flex flex-column">
-   <!--header-->
+  <!--header-->
   <header class="main-header clearfix" role="header">
     <div class="logo">
       <a href="index.php">Вгуит_лекции</a>
@@ -62,14 +71,14 @@ $email = $_SESSION['email'];
           </div>
           <div class="user-page-block">
             <div class="user-info">
-              <img class="user-img" width="140" height="140" src="assets\images\user.png" alt="user--v1"/>
+              <img class="user-img" width="140" height="140" src="assets\images\user.png" alt="user--v1" />
               <hr style="border: 1px solid #9c9c9c; width: 80%; margin-top: 10px;">
               <label>Логин:</label>
-              <h6><?php echo $_SESSION['username'];?></h6>
+              <h6><?php echo $_SESSION['username']; ?></h6>
               <label>Email:</label>
-              <h6><?php echo $_SESSION['email'];?></h6>
+              <h6><?php echo $_SESSION['email']; ?></h6>
               <label>Дата регистрации:</label>
-              <h6><?php echo $_SESSION['created_at'];?></h6>
+              <h6><?php echo $_SESSION['created_at']; ?></h6>
               <input type="submit" value="Выход" class="btn-exit btn btn-danger" onclick="logout()">
             </div>
             <div class="data-block">
@@ -84,12 +93,21 @@ $email = $_SESSION['email'];
                   <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-headingTwo">
                     <div class="accordion-body">
-                      <a>Ajax.txt</a>
-                      <hr>
-                      <a>CMS.txt</a>
-                      <hr>
-                      <a>Основы_php.txt</a>
-                      <hr>
+                      <?php
+                      $username = $_SESSION['username'];
+                      $notesDir = __DIR__ . '/notes/';
+                      $files = glob($notesDir . "$username-*.txt");
+
+                      if ($files) {
+                        foreach ($files as $file) {
+                          $noteContent = file_get_contents($file);
+                          // Parse note content or display as needed
+                          echo "<div class='note'><p>$noteContent</p></div>";
+                        }
+                      } else {
+                        echo "<p>У вас пока нет заметок.</p>";
+                      }
+                      ?>
                     </div>
                   </div>
                 </div>
@@ -103,9 +121,7 @@ $email = $_SESSION['email'];
                   <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                     aria-labelledby="panelsStayOpen-headingThree">
                     <div class="accordion-body">
-                      <a>Отчет-Ajax.docx</a>
-                      <hr>
-                      <a>Отчет-Ajax.docx</a>
+
                       <hr>
                     </div>
                   </div>
@@ -117,9 +133,9 @@ $email = $_SESSION['email'];
       </div>
   </section>
   <!-- end user page-->
-  
+
   <!-- footer -->
-  <footer style="bottom: 0;">
+  <footer>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -146,8 +162,9 @@ $email = $_SESSION['email'];
 
 <!-- Script end -->
 <script>
-    function logout() {
+  function logout() {
     window.location.href = 'logout.php';
-}
+  }
 </script>
+
 </html>

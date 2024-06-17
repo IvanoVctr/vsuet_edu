@@ -107,12 +107,6 @@
             </div>
           </div>
           <div class="item">
-            <img src="assets/images/ico/jQuery.png" alt="Course #3">
-            <div class="down-content">
-              <h4>jQuery</h4>
-            </div>
-          </div>
-          <div class="item">
             <img src="assets/images/ico/markdawn.png" alt="">
             <div class="down-content">
               <h4>Markdown</h4>

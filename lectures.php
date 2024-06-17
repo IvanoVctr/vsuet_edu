@@ -116,14 +116,16 @@ $Parsedown = new Parsedown();
 
   <!-- Notes -->
   <section class="section-notes">
+    <<section class="section-notes">
     <div class="notes">
-      <h4>Заметки</h4>
-      <form action="#" method="post">
-        <input type="hidden" name="lecture_id">
-        <textarea name="note" placeholder="Введите свою заметку"></textarea>
-        <input type="submit" value="Добавить заметку" class="btn btn btn-success">
-      </form>
+        <h4>Заметки</h4>
+        <form action="save_note.php" method="post">
+            <input name="title" type="text" id="title" placeholder="Заголовок лекции" required>
+            <textarea name="note" placeholder="Введите свою заметку" required></textarea>
+            <input type="submit" value="Добавить заметку" class="btn btn btn-success">
+        </form>
     </div>
+</section>
   </section>
   <!-- Notes end -->
 
